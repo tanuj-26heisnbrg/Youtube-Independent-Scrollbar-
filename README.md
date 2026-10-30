@@ -27,8 +27,9 @@ This lightweight Manifest V3 browser extension uses CSS and JavaScript. It needs
    - Brave: `brave://extensions`
    - Microsoft Edge: `edge://extensions`
 3. Turn on **Developer mode**.
-4. Choose **Load unpacked** and select the folder containing `manifest.json`.
-5. Open or reload a YouTube video page.
+4. Choose **Load unpacked** and select this downloaded folder containing `manifest.json`.
+5. Now turn the extension ON from the extension option on your browser's top right corner.
+6. Open or reload a YouTube video page. And you are good to go.
 
 The extension is enabled by default. Click its toolbar icon to open the popup and switch independent scrolling off or on. If the icon is hidden, use the browser's extensions menu to pin it.
 
