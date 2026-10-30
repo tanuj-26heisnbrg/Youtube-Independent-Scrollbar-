@@ -1,0 +1,30 @@
+/* Applied only while the extension is enabled and a watch page is active. */
+html.yt-independent-scroll-enabled ytd-watch-flexy #secondary {
+  position: sticky !important;
+  top: var(--yt-independent-scroll-top, 56px) !important;
+  align-self: flex-start !important;
+  height: calc(100vh - var(--yt-independent-scroll-top, 56px)) !important;
+  max-height: calc(100vh - var(--yt-independent-scroll-top, 56px)) !important;
+  overflow-y: auto !important;
+  overscroll-behavior-y: contain;
+  scrollbar-width: thin;
+}
+
+html.yt-independent-scroll-enabled ytd-watch-flexy #secondary::-webkit-scrollbar {
+  width: 8px;
+}
+
+html.yt-independent-scroll-enabled ytd-watch-flexy #secondary::-webkit-scrollbar-thumb {
+  background: var(--yt-spec-10-percent-layer, rgba(128, 128, 128, 0.45));
+  border-radius: 8px;
+}
+
+/* Avoid forcing the sidebar into a narrow or single-column mobile layout. */
+@media (max-width: 791px) {
+  html.yt-independent-scroll-enabled ytd-watch-flexy #secondary {
+    position: static !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow-y: visible !important;
+  }
+}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YouTube Independent Scroll</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="popup">
+      <div class="heading">
+        <div class="icon" aria-hidden="true">↕</div>
+        <div>
+          <h1>Independent Scroll</h1>
+          <p>YouTube recommendations</p>
+        </div>
+      </div>
+
+      <label class="toggle-row" for="enabled">
+        <span>
+          <strong>Enable sidebar scrolling</strong>
+          <small>Scroll recommendations separately</small>
+        </span>
+        <input id="enabled" type="checkbox" role="switch" aria-label="Enable independent scrolling">
+        <span class="switch" aria-hidden="true"></span>
+      </label>
+
+      <p id="status" class="status" aria-live="polite">Loading setting…</p>
+      <p class="hint">Open a YouTube video and scroll over the recommendations.</p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
