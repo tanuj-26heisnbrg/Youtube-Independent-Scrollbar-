@@ -58,6 +58,4 @@ The extension does not collect or transmit browsing data. It requests the `stora
 
 Edit the files, then click **Reload** for the extension on the browser's extensions page. Reload the YouTube tab to apply changes to the content script or styles.
 
-## License
 
-No license has been specified yet. Add a `LICENSE` file before redistributing this project if you want to grant others clear permission to use, modify, or share it.
