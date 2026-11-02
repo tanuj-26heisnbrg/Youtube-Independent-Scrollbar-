@@ -1,4 +1,4 @@
-# YouTube Independent Scroll
+# YouTube Independent Scroll ![Extension Logo](asset/icon48.png)
 
 Make YouTube's recommendations sidebar scroll independently from the video and main page. Hover over recommendations and scroll to browse them while the main page stays in place. Scroll outside the sidebar to use YouTube's normal page scrolling.
 
