@@ -5,11 +5,13 @@ Make YouTube's recommendations sidebar scroll independently from the video and m
 This lightweight Manifest V3 browser extension uses CSS and JavaScript. It needs no backend, account, or AI service.
 
 ## Without Independent Scroll:
-![Extension screenshot](asset/without.png)
+
+![Independent scrolling demo](asset/DemoWithout.gif)
 (Whole page layout gets scrolled up)
 
 ## With Independent Scroll On:
-![Extension screenshot](asset/with.png)
+
+![Independent scrolling demo](asset/DemoWith.gif)
 (Only The right side recommended video section gets Scrolled up)
 ## Features
 
