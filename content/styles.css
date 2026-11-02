@@ -6,7 +6,8 @@ html.yt-independent-scroll-enabled ytd-watch-flexy #secondary {
   height: calc(100vh - var(--yt-independent-scroll-top, 56px)) !important;
   max-height: calc(100vh - var(--yt-independent-scroll-top, 56px)) !important;
   overflow-y: auto !important;
-  overscroll-behavior-y: contain;
+  /* Let wheel/touch scrolling continue onto the page at the list boundary. */
+  overscroll-behavior-y: auto;
   scrollbar-width: thin;
 }
 
@@ -19,12 +20,47 @@ html.yt-independent-scroll-enabled ytd-watch-flexy #secondary::-webkit-scrollbar
   border-radius: 8px;
 }
 
-/* Avoid forcing the sidebar into a narrow or single-column mobile layout. */
-@media (max-width: 791px) {
+/*
+ * In YouTube's one-column layout, recommendations flow below the player in
+ * #primary-inner instead of living in the desktop #secondary column. Keep the
+ * recommendations list itself scrollable there, while leaving the page as the
+ * scroll container so users can reach content before and after it.
+ */
+@media (max-width: 1015px) {
   html.yt-independent-scroll-enabled ytd-watch-flexy #secondary {
     position: static !important;
+    inset: auto !important;
+    width: auto !important;
     height: auto !important;
     max-height: none !important;
-    overflow-y: visible !important;
+    overflow: visible !important;
+  }
+
+  html.yt-independent-scroll-enabled ytd-watch-flexy #primary-inner {
+    min-width: 0 !important;
+  }
+
+  html.yt-independent-scroll-enabled ytd-watch-flexy #primary-inner #secondary,
+  html.yt-independent-scroll-enabled ytd-watch-flexy #primary-inner #related {
+    position: static !important;
+    top: auto !important;
+    height: min(70vh, 720px) !important;
+    max-height: min(70vh, 720px) !important;
+    overflow-y: auto !important;
+    overscroll-behavior-y: auto !important;
+    scrollbar-width: thin;
+  }
+}
+
+@media (max-height: 480px) {
+  html.yt-independent-scroll-enabled ytd-watch-flexy #secondary {
+    height: calc(100vh - var(--yt-independent-scroll-top, 56px)) !important;
+    max-height: calc(100vh - var(--yt-independent-scroll-top, 56px)) !important;
+  }
+
+  html.yt-independent-scroll-enabled ytd-watch-flexy #primary-inner #secondary,
+  html.yt-independent-scroll-enabled ytd-watch-flexy #primary-inner #related {
+    height: 60vh !important;
+    max-height: 60vh !important;
   }
 }
